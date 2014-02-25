@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.ServiceConnection;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
@@ -98,7 +100,8 @@ public class MainActivity extends Activity implements OnClickListener{
 			stopService(i);
 			break;
 		case R.id.button4:
-			
+			Intent bindIntent = new Intent(this,YimqService.class);
+			bindService(bindIntent, mConnection, Context.BIND_AUTO_CREATE);
 			break;
 		case R.id.button5:
 			break;
@@ -122,6 +125,16 @@ public class MainActivity extends Activity implements OnClickListener{
 			mService = ((YimqService.YimqBinder)service).getService();
 		}
 	};
+	public class MyAsyncTask extends AsyncTask<String, Integer, String>{
+
+		@Override
+		protected String doInBackground(String... params) {
+			
+			
+			return null;
+		}
+		
+	}
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		Log.d(TAG, "onSaveInstanceState");
