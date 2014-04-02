@@ -36,7 +36,7 @@ public class MainActivity extends Activity implements OnClickListener{
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Log.d(TAG, "onCreatesssdddd");
+		Log.d(TAG, "onCreatesssddddddd");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		final ArrayList<String> items = new ArrayList<String>();
