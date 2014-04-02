@@ -31,11 +31,12 @@ public class MainActivity extends Activity implements OnClickListener{
 	private Button b4;
 	private Button b5;
 	private Button b6;
+
 	private YimqService mService;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		Log.d(TAG, "onCreate");
+		Log.d(TAG, "onCreatesss");
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		final ArrayList<String> items = new ArrayList<String>();
